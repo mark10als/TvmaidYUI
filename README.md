@@ -17,7 +17,7 @@ Version は、 "Tvmaid YUI 1.7a mod by mark10als at リリース日付" とし�
 
 ## 謝辞
 Tvmaidについて語るスレ(http://echo.2ch.net/test/read.cgi/avi/1453201688/)  
->>76 にて、maidの中の人 ◆dGJLJP3RhQ さんが改造版の公開を
+スレの>>76 にて、maidの中の人 ◆dGJLJP3RhQ さんが改造版の公開を
 許可してくださり、ありがとうございました。  
 そして、>>346,>>403にてビルドできるソースを公開してくださった
 有志の方にも、お礼を申し上げます。  
@@ -25,29 +25,29 @@ Tvmaidについて語るスレ(http://echo.2ch.net/test/read.cgi/avi/1453201688/
 
 おかげさまで、以下の改造を行うことができました。  
 １．以前搭載されていた「予備録画フォルダの設定」を復活させました。  
-　　>>76 にて、maidの中の人は、否定的でしたが、「録り逃しを防ぐ機能」の
+　　>>76 にて、maidの中の人は、否定的でしたが、「録り逃しを防ぐ機能」の  
 　　一つの対策としては、私は有用であると思い復活させました。  
-２．自動予約録画に最小時間と最大時間を設定して、条件に該当するものを
+２．自動予約録画に最小時間と最大時間を設定して、条件に該当するものを  
 　　無効として予約登録させました。  
 ３．ファイル名の拡張変更を追加した。  
-　　バッチスクリプトでファイル名を操作するときに、不具合のある文字を
+　　バッチスクリプトでファイル名を操作するときに、不具合のある文字を  
 　　幾つか変更するようにした。  
 　　半角の%と&は、全角に変換  
 　　半角と全角の空白は、半角の「_」（アンダーバー）に変換  
 
 ## 使用方法
-１．オリジナルのTvmaid YUI 1.7aのフォルダーにビルドした
+１．オリジナルのTvmaid YUI 1.7aのフォルダーにビルドした  
 　　中のファイルを上書きします。  
 ２．userフォルダーのmain.defファイルに以下の項目を追加してください。  
 　　項目の値は各自の環境に合わせて調整してください。  
-    -----------
-    record.folder.spare=I:\TV-Capcher-2nd\
-    record.folder.spare.use=30
-    record.margin.overlap=0
-    record.minimal.minute=15
-    record.maximum.minute=150
-    extend.name.change=1
-    -----------
+-----------  
+record.folder.spare=I:\TV-Capcher-2nd\  
+record.folder.spare.use=30  
+record.margin.overlap=0  
+record.minimal.minute=15  
+record.maximum.minute=150  
+extend.name.change=1  
+-----------  
 　　record.margin.overlapに「0」を設定すると録画マージンの重複を許可します。  
 　　extend.name.changeに「0」を設定するとファイル名の拡張変更は、無効になります。  
 
