@@ -1,0 +1,6 @@
+LIBRARY TvmaidPlugin.tvtp
+EXPORTS
+TVTFinalize @1
+TVTGetPluginInfo @2
+TVTGetVersion @3
+TVTInitialize @4

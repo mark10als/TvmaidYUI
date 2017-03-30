@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{3AA36497-C727-4498-B16A-E726A4F136B1}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>Tvmaid</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>tv.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <OutputPath>..\bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="DynamicJson">
+      <HintPath>..\DynamicJson.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tvmaid.Properties\Resources.cs" />
+    <Compile Include="Tvmaid.Properties\Settings.cs" />
+    <Compile Include="Tvmaid\AppData.cs" />
+    <Compile Include="Tvmaid\AutoRecord.cs" />
+    <Compile Include="Tvmaid\DataTable.cs" />
+    <Compile Include="Tvmaid\DupServiceException.cs" />
+    <Compile Include="Tvmaid\EpgQueue.cs" />
+    <Compile Include="Tvmaid\EpgTask.cs" />
+    <Compile Include="Tvmaid\EpgWait.cs" />
+    <Compile Include="Tvmaid\Event.cs" />
+    <Compile Include="Tvmaid\ExitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tvmaid\GenreConv.cs" />
+    <Compile Include="Tvmaid\Log.cs" />
+    <Compile Include="Tvmaid\MainDef.cs" />
+    <Compile Include="Tvmaid\PairList.cs" />
+    <Compile Include="Tvmaid\Program.cs" />
+    <Compile Include="Tvmaid\Record.cs" />
+    <Compile Include="Tvmaid\RecTask.cs" />
+    <Compile Include="Tvmaid\RecTimer.cs" />
+    <Compile Include="Tvmaid\Result.cs" />
+    <Compile Include="Tvmaid\Service.cs" />
+    <Compile Include="Tvmaid\Shared.cs" />
+    <Compile Include="Tvmaid\SleepCountdown.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tvmaid\SleepMan.cs" />
+    <Compile Include="Tvmaid\SleepState.cs" />
+    <Compile Include="Tvmaid\Sql.cs" />
+    <Compile Include="Tvmaid\SqlRegex.cs" />
+    <Compile Include="Tvmaid\StringExtension.cs" />
+    <Compile Include="Tvmaid\TextConv.cs" />
+    <Compile Include="Tvmaid\Ticket.cs" />
+    <Compile Include="Tvmaid\TsStatus.cs" />
+    <Compile Include="Tvmaid\Tuner.cs" />
+    <Compile Include="Tvmaid\TunerMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tvmaid\TunerServer.cs" />
+    <Compile Include="Tvmaid\TunerServerExceotion.cs" />
+    <Compile Include="Tvmaid\Util.cs" />
+    <Compile Include="Tvmaid\WakeTimer.cs" />
+    <Compile Include="Tvmaid\WebApi.cs" />
+    <Compile Include="Tvmaid\WebApiBase.cs" />
+    <Compile Include="Tvmaid\WebRet.cs" />
+    <Compile Include="Tvmaid\WebServer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tvmaid.Properties\Resources.resources" />
+    <EmbeddedResource Include="Tvmaid\ExitForm.resources" />
+    <EmbeddedResource Include="Tvmaid\SleepCountdown.resources" />
+    <EmbeddedResource Include="Tvmaid\TunerMon.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="tv.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
