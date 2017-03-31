@@ -210,7 +210,8 @@ namespace Tvmaid
 		{
 			this.recContinue = false;
 			this.eventTimeError = false;
-			string text = this.GetRecPath();
+			string TunerName = this.tuner.Name;		    //Tuner名の取得を追加
+			string text = this.GetRecPath(TunerName);   //GetRecPathにTiner名を渡すよう変更
 			this.recPath = text;
 			this.InitResult(text);
 			this.tsStatus = new TsStatus();
@@ -232,9 +233,15 @@ namespace Tvmaid
 			this.result.Start = DateTime.Now;
 		}
 
-		private string GetRecPath()
+		private string GetRecPath(string tunername) //引数Tuner名を追加
 		{
-			string arg_26_0 = MainDef.GetInstance()["record.folder"];
+			//main.defのrecord.tunerfolderを取得する処理を追加
+			string arg_26_0 = MainDef.GetInstance()["record.tunerfolder." + tunername];
+			bool flag3 = arg_26_0 == "";
+			if (flag3)
+			{
+				arg_26_0 = MainDef.GetInstance()["record.tunerfolder"];
+			}
 			// mark10als
 			string text2 = MainDef.GetInstance()["record.folder.spare"];
 			bool flag = text2 != "";

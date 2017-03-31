@@ -1,4 +1,5 @@
 ﻿# Tvmaid YUI バージョン 1.7a のmark10alsに依る改造版
+https://github.com/mark10als/TvmaidYUI
 
 ## オリジナル
 Tvmaidのサイト(http://nana2.sarashi.com/)で公開されていた"Tvmaid YUI 1.7a"です。  
@@ -29,31 +30,39 @@ Tvmaidについて語るスレ(http://echo.2ch.net/test/read.cgi/avi/1453201688/
 　　一つの対策としては、私は有用であると思い復活させました。  
 ２．自動予約録画に最小時間と最大時間を設定して、条件に該当するものを  
 　　無効として予約登録させました。  
-３．ファイル名の拡張変更を追加した。  
-　　バッチスクリプトでファイル名を操作するときに、不具合のある文字を  
-　　幾つか変更するようにした。  
+３．チューナーを割り当てるときに録画マージンを考慮して別のチューナーに割り当てする機能を追加した。  
+　　＊この機能を有効にすると標準時より多くのチューナーを使用します。  
+　　　チューナーが少ない場合は、この機能を無効にしたほうがよいでしょう。  
+４．ファイル名の拡張変更を追加した。  
+　　バッチスクリプトでファイル名を操作するときに、不具合のある文字を幾つか変更するようにした。  
 　　半角の%と&は、全角に変換  
 　　半角と全角の空白は、半角の「_」（アンダーバー）に変換  
+５．チューナー毎に録画保存フォルダーの指定を反映した。  
+Tvmaid録画フォルダ改変テスト  
+http://www.axfc.net/u/3707929  
 
 ## 使用方法
-１．オリジナルのTvmaid YUI 1.7aのフォルダーにビルドした  
-　　中のファイルを上書きします。  
-２．userフォルダーのmain.defファイルに以下の項目を追加してください。  
+オリジナルのTvmaid YUI 1.7aのフォルダーに、ビルドした中のファイルを上書きします。  
+userフォルダーのmain.defファイルに以下の項目を追加してください。  
 　　項目の値は各自の環境に合わせて調整してください。  
 -----------  
 record.folder.spare=I:\TV-Capcher-2nd\  
 record.folder.spare.use=30  
-record.margin.overlap=0  
 record.minimal.minute=15  
 record.maximum.minute=150  
+record.margin.overlap=1  
 extend.name.change=1  
 -----------  
 　　record.margin.overlapに「0」を設定すると録画マージンの重複を許可します。  
 　　extend.name.changeに「0」を設定するとファイル名の拡張変更は、無効になります。  
 
 ## 参照
-http://nana2.sarashi.com/tvmaid-yui/  
+* Tvmaid
+http://nana2.sarashi.com/  
+* TvmaidYUI-107a_src.zip
 http://www1.axfc.net/u/3637277  
+* Tvmaid録画フォルダ改変テスト
+http://www.axfc.net/u/3707929
 
 ## テスト環境
 * TvTest_0.7.23fix
@@ -63,7 +72,7 @@ http://www1.axfc.net/u/3637277
 
 ## 開発環境
 * Microsoft Windows 7 Professional 64bit
-* Microsoft Visual Studio Express 2015 for Windows Desktop
+* Microsoft Visual Studio Express 2013 for Windows Desktop
 
 ## ライセンス
 オリジナルに準じます。  
