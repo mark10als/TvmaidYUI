@@ -235,13 +235,8 @@ namespace Tvmaid
 
 		private string GetRecPath(string tunername) //引数Tuner名を追加
 		{
-			//main.defのrecord.tunerfolderを取得する処理を追加
+			//main.defのTuner名毎のrecord.tunerfolderを取得する処理を追加
 			string arg_26_0 = MainDef.GetInstance()["record.tunerfolder." + tunername];
-			bool flag3 = arg_26_0 == "";
-			if (flag3)
-			{
-				arg_26_0 = MainDef.GetInstance()["record.tunerfolder"];
-			}
 			// mark10als
 			string text2 = MainDef.GetInstance()["record.folder.spare"];
 			bool flag = text2 != "";

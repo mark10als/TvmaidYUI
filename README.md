@@ -42,8 +42,8 @@ Tvmaid録画フォルダ改変テスト
 http://www.axfc.net/u/3707929  
 
 ## 使用方法
-オリジナルのTvmaid YUI 1.7aのフォルダーに、ビルドした中のファイルを上書きします。  
-userフォルダーのmain.defファイルに以下の項目を追加してください。  
+* オリジナルのTvmaid YUI 1.7aのフォルダーに、ビルドした中のファイルを上書きします。  
+* userフォルダーのmain.defファイルに以下の項目を追加してください。  
 　　項目の値は各自の環境に合わせて調整してください。  
 -----------  
 record.folder.spare=I:\TV-Capcher-2nd\  
@@ -57,12 +57,12 @@ extend.name.change=1
 　　extend.name.changeに「0」を設定するとファイル名の拡張変更は、無効になります。  
 
 ## 参照
-* Tvmaid
+* Tvmaid  
 http://nana2.sarashi.com/  
-* TvmaidYUI-107a_src.zip
+* TvmaidYUI-107a_src.zip  
 http://www1.axfc.net/u/3637277  
-* Tvmaid録画フォルダ改変テスト
-http://www.axfc.net/u/3707929
+* Tvmaid録画フォルダ改変テスト  
+http://www.axfc.net/u/3707929  
 
 ## テスト環境
 * TvTest_0.7.23fix
