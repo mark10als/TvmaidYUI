@@ -6,6 +6,10 @@
 *.user
 *.sln.docstates
 
+# bat
+*.bat
+*.zip
+
 # Build results
 
 [Dd]ebug/

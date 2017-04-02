@@ -9,6 +9,9 @@ namespace Tvmaid
 {
 	internal class RecTask
 	{
+		// mark10als
+		private PairList list;
+
 		private Tuner tuner;
 
 		private Sql sql;
@@ -236,7 +239,30 @@ namespace Tvmaid
 		private string GetRecPath(string tunername) //引数Tuner名を追加
 		{
 			//main.defのTuner名毎のrecord.tunerfolderを取得する処理を追加
+			string arg_26_0;
+			this.list = new PairList(Util.GetUserPath("main.def"));
+			this.list.Load();
+			if (this.list.IsDefined("record.tunerfolder." + tunername))
+			{
+				arg_26_0 = MainDef.GetInstance()["record.tunerfolder." + tunername];
+			}
+			else
+			{
+				arg_26_0 = MainDef.GetInstance()["record.folder"];
+			}
+/*
+			Log.Write("保存フォルダー0:" + tunername);
 			string arg_26_0 = MainDef.GetInstance()["record.tunerfolder." + tunername];
+			int iLength = arg_26_0.Length;
+			bool flag3 = iLength == 0;
+			Log.Write("保存フォルダー1:" + arg_26_0);
+			Log.Write("保存フォルダー2:" + iLength);
+			if (flag3)
+			{
+				arg_26_0 = MainDef.GetInstance()["record.folder"];
+			}
+			Log.Write("保存フォルダー3:" + arg_26_0);
+*/
 			// mark10als
 			string text2 = MainDef.GetInstance()["record.folder.spare"];
 			bool flag = text2 != "";

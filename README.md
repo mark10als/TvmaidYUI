@@ -40,18 +40,23 @@ Tvmaidについて語るスレ(http://echo.2ch.net/test/read.cgi/avi/1453201688/
 ５．チューナー毎に録画保存フォルダーの指定を反映した。  
 Tvmaid録画フォルダ改変テスト  
 http://www.axfc.net/u/3707929  
+６．チューナー毎の保存フォルダーを指定していない場合には、  
+「record.folder」の設定先に保存する。  
 
 ## 使用方法
 * オリジナルのTvmaid YUI 1.7aのフォルダーに、ビルドした中のファイルを上書きします。  
 * userフォルダーのmain.defファイルに以下の項目を追加してください。  
 　　項目の値は各自の環境に合わせて調整してください。  
 -----------  
-record.folder.spare=I:\TV-Capcher-2nd\  
-record.folder.spare.use=30  
-record.minimal.minute=15  
-record.maximum.minute=150  
-record.margin.overlap=1  
-extend.name.change=1  
+	record.folder=E:\TV-Capcher
+	;record.tunerfolder.地上1=E:\TV-Capcher
+	record.tunerfolder.衛星1=E:\TV-Capcher
+	record.folder.spare=I:\TV-Capcher-2nd\  
+	record.folder.spare.use=30  
+	record.minimal.minute=15  
+	record.maximum.minute=150  
+	record.margin.overlap=1  
+	extend.name.change=1  
 -----------  
 　　record.margin.overlapに「0」を設定すると録画マージンの重複を許可します。  
 　　extend.name.changeに「0」を設定するとファイル名の拡張変更は、無効になります。  
