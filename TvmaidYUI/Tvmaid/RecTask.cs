@@ -115,7 +115,14 @@ namespace Tvmaid
 				if (this.result.Code == 0 && text != "")
 				{
 					Log.Write("録画後プロセス実行.");
-					Process.Start(text, "\"" + this.recPath + "\"");
+					// mark10als 
+					//Process.Start(text, "\"" + this.recPath + "\"");
+					ProcessStartInfo ppInfo = new ProcessStartInfo();
+					ppInfo.FileName = text; // 実行するファイル
+					ppInfo.Arguments = "\"" + this.recPath + "\"";
+					ppInfo.CreateNoWindow = false; // コンソール・ウィンドウを開かない
+					ppInfo.UseShellExecute = false; // シェル機能を使用しない
+					Process.Start(ppInfo);
 				}
 			}
 			catch (Exception ex)

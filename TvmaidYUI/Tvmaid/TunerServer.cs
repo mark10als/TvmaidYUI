@@ -99,7 +99,13 @@ namespace Tvmaid
 					Process expr_4A = new Process();
 					expr_4A.StartInfo.FileName = MainDef.GetInstance()["tvtest"];
 					expr_4A.StartInfo.Arguments = string.Format("/d \"{0}\"" + str, this.driverPath);
+					// mark10als
+					//WindowStyleにHiddenを指定して、非表示された状態で起動されるようにする
+					expr_4A.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+					//UseShellExecuteをTrueにする（デフォルトでTrueなので、変更する必要なし）
+					//expr_4A.StartInfo.UseShellExecute = false;
 					expr_4A.StartInfo.UseShellExecute = false;
+					//
 					expr_4A.StartInfo.EnvironmentVariables.Add("DriverId", this.driverId);
 					expr_4A.Start();
 					expr_4A.WaitForInputIdle();

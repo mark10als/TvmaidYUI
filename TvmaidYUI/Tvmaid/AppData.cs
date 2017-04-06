@@ -8,6 +8,6 @@ namespace Tvmaid
 
 		public static string AppVersion = "YUI 1.7a";
 		// mark10als
-		public static string AppMod = "mod by mark10als at 2017/04/03";
+		public static string AppMod = "mod by mark10als at 2017/04/04";
 	}
 }
