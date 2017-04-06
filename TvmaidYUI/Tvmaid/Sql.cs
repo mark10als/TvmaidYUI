@@ -40,7 +40,7 @@ namespace Tvmaid
 		{
 			SQLiteConnectionStringBuilder sQLiteConnectionStringBuilder = new SQLiteConnectionStringBuilder
 			{
-				DataSource = Path.Combine(Util.GetUserPath(), "tvmaid-2.db"),
+				DataSource = Path.Combine(Util.GetUserPath(), "tvmaid-3.db"),
 				Version = 3,
 				LegacyFormat = false,
 				SyncMode = SynchronizationModes.Normal,
