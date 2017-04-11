@@ -28,6 +28,8 @@ namespace Tvmaid
 
 		public int Status = 3;
 
+		public int rec_view = 0;
+
 		public string Title = "未定";
 
 		public string TunerName = "";
@@ -59,6 +61,7 @@ namespace Tvmaid
 			this.Duration = t.GetInt("duration");
 			this.Auto = t.GetInt("auto");
 			this.Status = t.GetInt("status");
+			this.rec_view = t.GetInt("rec_view");
 			this.Title = t.GetStr("title");
 			this.TunerName = t.GetStr("tuner");
 		}
@@ -324,7 +327,7 @@ namespace Tvmaid
 			{
 				this.Remove(sql, true);
 			}
-			sql.Text = "insert into record values(\r\n                            {0}, {1}, {2},\r\n                            {3}, {4}, {5},\r\n                            {6}, {7}, '{8}', '{9}');".Formatex(new object[]
+			sql.Text = "insert into record values(\r\n                            {0}, {1}, {2},\r\n                            {3}, {4}, {5},\r\n                            {6}, {7}, {8}, '{9}', '{10}');".Formatex(new object[]
 			{
 				this.Id,
 				this.Fsid,
@@ -334,6 +337,7 @@ namespace Tvmaid
 				this.Duration,
 				this.Auto,
 				this.Status,
+				this.rec_view,	// mark10als
 				Sql.SqlEncode(this.Title),
 				Sql.SqlEncode(this.TunerName)
 			});
